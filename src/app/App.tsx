@@ -6,26 +6,16 @@ import { HomePage } from "./screens/homePage";
 import { ProductsPage } from "./screens/productsPage";
 import { OrdersPage } from "./screens/ordersPage";
 import { UserPage } from "./screens/userPage";
+import { HomeNavbar } from "./screens/components/header/HomeNavbar";
+import { Footer } from "./screens/components/footer";
 
 function App() {
+
   return (
-    <div>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/"> HomePge</Link>
-          </li>
-          <li>
-            <Link to="/products"> ProductsPage</Link>
-          </li>
-          <li>
-            <Link to="/orders"> OrdersPage</Link>
-          </li>
-          <li>
-            <Link to="/member-page"> UserPage</Link>
-          </li>
-        </ul>
-      </nav>
+    <>
+      
+
+     <HomeNavbar/>
 
       <Switch>
         <Route path="/products">
@@ -41,7 +31,9 @@ function App() {
           <HomePage />
         </Route>
       </Switch>
-    </div>
+
+      <Footer/>
+    </>
   );
 }
 
